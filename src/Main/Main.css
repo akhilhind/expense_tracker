@@ -1,0 +1,17 @@
+#main-component {
+    padding: 5px;
+    /* height: 98vh; */
+    width: 50vh;
+    margin: auto;
+    /* border: 2px solid #ffffff; */
+    display: flex;
+    /* justify-content: space-around; */
+    flex-direction: column;
+    gap: 10px;
+}
+
+h2 {
+    margin: 10px 0;
+    font-weight: 600;
+    font-size: 20px;
+}

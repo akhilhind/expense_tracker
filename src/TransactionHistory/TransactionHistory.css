@@ -1,0 +1,53 @@
+#transaction-history {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+#history-break {
+    width: 100%;
+    height: 2px;
+    background-color: #cdc8c8;
+}
+
+#actual-transactions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 180px;
+    overflow-y: scroll;
+}
+
+#actual-transactions::-webkit-scrollbar {
+    width: 5px;
+}
+
+#actual-transactions::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px; 
+}
+
+#actual-transactions::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px; 
+}
+  
+
+.single-transaction {
+    color: #000000;
+    background-color: #FFFFFF;
+    /* margin: 8px 0; */
+    padding: 9px 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.debit {
+    border-right: 4px solid red;
+}
+
+.credit {
+    border-right: 4px solid #32C571;
+}

@@ -1,0 +1,14 @@
+#current-balance {
+    display: flex;
+    flex-direction: column;
+}
+
+#balance-head {
+    font-size: 15px;
+}
+
+#actual-balance {
+    font-size: 30px;
+    margin: 0;
+    font-weight: bold;
+}
