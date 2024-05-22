@@ -13,7 +13,6 @@ function Main() {
     const [transactions, updateTransactions] = useState([]);
 
     useEffect(() => {
-        console.log(totalIncome - totalExpense);
         updateTotalBalance(totalIncome - totalExpense);
     }, [totalIncome, totalExpense]);
 
