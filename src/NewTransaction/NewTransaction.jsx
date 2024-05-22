@@ -20,8 +20,8 @@ function NewTransaction({updateTransactions, updateTotalIncome, updateTotalExpen
 
         updateTransactions(prevTransaction => [...prevTransaction, new_transaction]);
 
-        if(amount > 0) updateTotalIncome(prev => parseInt(prev) + parseInt(amount));
-        else if(amount < 0) updateTotalExpense(prev => parseInt(prev) + Math.abs(amount));
+        if(amount > 0) updateTotalIncome(prev => prev + parseFloat(amount));
+        else if(amount < 0) updateTotalExpense(prev => prev + Math.abs(parseFloat(amount)));
 
 
         document.getElementById('new-amount').value = '';

@@ -4,7 +4,7 @@ import './Balance.css';
 
 function Balance({totalBalance}) {
     const displayTotalBalance = () => {
-        return totalBalance + ".00";
+        return totalBalance.toFixed(2);
     }
 
     return (
