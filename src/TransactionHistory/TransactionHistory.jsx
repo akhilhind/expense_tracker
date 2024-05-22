@@ -12,8 +12,12 @@ function TransactionHistory({transactions}) {
         return transactions.map((transaction, index) => 
         <div key={index} className={`${transaction.type} single-transaction`}>
             <span>{transaction.name}</span>
-            <span>{transaction.type === 'debit'?'':'+'}{transaction.amount}</span>
+            <span>{transaction.type === 'debit'?'':'+'}{formatAmount(transaction.amount)}</span>
         </div>)
+    }
+
+    function formatAmount(amount) {
+        return parseFloat(amount).toFixed(2);
     }
 
     if(transactions.length > 0) {

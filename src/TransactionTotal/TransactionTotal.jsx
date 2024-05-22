@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './TransactionTotal.css';
 
 function TransactionTotal({totalIncome, totalExpense}) {
 
     const displayIncome = () => {
         console.log(totalIncome);
-        return totalIncome + ".00";
+        return parseFloat(totalIncome).toFixed(2);
     }
 
     const displayExpense = () => {
-        return totalExpense + ".00";
+        return parseFloat(totalExpense).toFixed(2);
     }
 
     return (
