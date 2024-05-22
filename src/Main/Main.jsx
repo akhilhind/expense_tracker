@@ -13,6 +13,7 @@ function Main() {
     const [transactions, updateTransactions] = useState([]);
 
     useEffect(() => {
+        console.log(totalIncome - totalExpense);
         updateTotalBalance(totalIncome - totalExpense);
     }, [totalIncome, totalExpense]);
 
@@ -21,7 +22,7 @@ function Main() {
             <Header />
             <Balance totalBalance={totalBalance} />
             <TransactionTotal totalIncome={totalIncome} totalExpense={totalExpense} />
-            <TransactionHistory transactions={transactions} />
+            <TransactionHistory transactions={transactions} updateTotalIncome={updateTotalIncome} updateTotalExpense={updateTotalExpense} />
             <NewTransaction updateTransactions={updateTransactions} updateTotalIncome={updateTotalIncome} updateTotalExpense={updateTotalExpense} />
         </div>
     )

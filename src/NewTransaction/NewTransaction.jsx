@@ -1,7 +1,7 @@
 import React from 'react';
 import './NewTransaction.css';
 
-function NewTransaction({updateTransactions, updateTotalIncome, updateTotalExpense, updateTotalBalance}) {
+function NewTransaction({updateTransactions, updateTotalIncome, updateTotalExpense}) {
 
     const newTransactionHandler = () => {
         const amount = document.getElementById('new-amount').value;
@@ -12,7 +12,7 @@ function NewTransaction({updateTransactions, updateTotalIncome, updateTotalExpen
 
         const new_transaction = {
             'name': text,
-            'amount': amount,
+            'amount': Math.abs(amount),
             'type': amount < 0 ? 'debit' : 'credit'
         }
 
