@@ -5,7 +5,6 @@ function NewTransaction({updateTransactions, updateTotalIncome, updateTotalExpen
 
     const newTransactionHandler = () => {
         const amount = document.getElementById('new-amount').value;
-        console.log(amount);
         const text = document.getElementById('new-title').value;
         
         if(amount == '' || text == '') return;
@@ -16,7 +15,6 @@ function NewTransaction({updateTransactions, updateTotalIncome, updateTotalExpen
             'type': amount < 0 ? 'debit' : 'credit'
         }
 
-        console.log("new_transaction = ", new_transaction);
 
         updateTransactions(prevTransaction => [...prevTransaction, new_transaction]);
 

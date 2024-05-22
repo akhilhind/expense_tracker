@@ -4,7 +4,6 @@ import './TransactionTotal.css';
 function TransactionTotal({totalIncome, totalExpense}) {
 
     const displayIncome = () => {
-        console.log(totalIncome);
         return parseFloat(totalIncome).toFixed(2);
     }
 
